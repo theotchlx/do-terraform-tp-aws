@@ -1,7 +1,13 @@
+variable "region" {
+  description = "region for the AWS EC2 instance"
+  type    = string
+  default = "us-east-1"
+}
+
 variable "instance_name" {
   description = "EC2 instance name"
   type        = string
-  default     = "my-vm"
+  default     = "my-ec2-instance"
 }
 
 variable "instance_type" {
@@ -20,5 +26,5 @@ variable "user_data" {
 variable "instance_role_name" {
   description = "Name of the IAM role for the EC2 instance"
   type        = string
-  default     = "ec2-instance-role"
+  default     = "LabInstanceProfile"  // LabRole role's instance profile
 }
