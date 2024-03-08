@@ -43,3 +43,14 @@ License: None. Do whatever u want with it.
 
 ### There you go! Well done.
 ### If you want to use Cloud9 as your IDE, you can add your GitHub keys to push your changes to your repo.
+
+
+Code du prof :
+Installation de terraform sur cloud9 :
+```
+tf_version=1.7.4
+wget https://releases.hashicorp.com/terraform/1.7.4/terraform_1.7.4_linux_amd64.zip;
+sudo unzip terraform_*_linux_amd64.zip -d /usr/local/bin;
+rm terraform_*_linux_amd64.zip;
+terraform --version;
+```
