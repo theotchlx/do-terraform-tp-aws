@@ -1,12 +1,12 @@
 # Provision the EC2 instance
 resource "aws_instance" "ec2_instance" {
-  ami           = data.aws_ami.amazon_linux_ami.id
-  instance_type = var.instance_type
-  // user_data     = var.user_data
+  for_each = { for idx, name in var.instance_name : idx => name }
 
-  iam_instance_profile = var.instance_role_name
+  ami             = data.aws_ami.amazon_linux_ami.id
+  instance_type   = var.instance_type[each.key]
+  iam_instance_profile = var.instance_role_name[each.key]
 
   tags = {
-    Name = var.instance_name
+    Name = each.value
   }
 }
