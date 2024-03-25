@@ -46,7 +46,7 @@ The Cloud9 environment doesn't come with Terraform, so you'll need to install it
 You can now use the `terraform` command! You should also be able to clone my GitHub repository on the Cloud9 environment: `git clone git@github.com:theotchlx/do-terraform-tp-aws.git`.  
 But for that, you need to give a keypair to your environment.
 
-Navigate to the "5-modules-EC2-IAM" directory using `cd 5-modules-EC2-IAM` and run `terraform apply`. Type `yes` and press enter.  
+Navigate to the "5-modules-EC2-IAM" directory using `cd 5-modules-EC2-IAM` and run `terraform init` followed by `terraform apply`. Type `yes` and press enter.  
 This will provision the infrastructure.
 
 ---
