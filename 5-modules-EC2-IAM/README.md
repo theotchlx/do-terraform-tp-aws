@@ -1,5 +1,23 @@
 # TP Terraform: Déploiement AWS avec Modules, Variables, et Outputs
 
+This doc contains actually 2 docs! How original, and confusing.
+## Summary
+1. Theo T's doc
+2. Theo P's doc
+
+---
+
+# 1. Theo T (my) doc
+
+## Summary
+1.
+2.
+3.
+4.
+
+---
+
+# 2. Theo P (Teach)'s doc
 ## Objectif
 Le but de ce TP est de vous familiariser avec Terraform en déployant des ressources AWS à l'aide de modules, de variables, d'outputs.
 Résultat final : Un module TF modulaire et clef en main pour déployer des EC2s et en être automatiquement notifier de leur création (par email).
