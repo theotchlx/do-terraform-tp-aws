@@ -9,8 +9,6 @@ This doc contains actually 2 docs! How original, and confusing.
 
 # 1. Theo T (my) doc
 
-## PS: the feature that allows to deploy EC2 instances in a list (using for_each) is in the develop branch.
-
 ## Summary
 1. Prerequisites
 2. Executing the code

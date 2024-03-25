@@ -1,11 +1,10 @@
-variable "instance_name" {
-  description = "EC2 instance name"
-  type        = string
-}
-
-variable "instance_type" {
-  description = "EC2 instance type"
-  type        = string
+variable "ec2_instances" {
+  description = "List of EC2 instances to deploy"
+  type        = map(object({
+    instance_name = string  // EC2 instance name
+    instance_type = string  // EC2 instance type
+    user_data     = string  // Custom user data for the EC2 instance
+  }))
 }
 
 variable "instance_role_name" {

@@ -17,8 +17,7 @@ module "ec2-instance" {
   source = "./modules/ec2-instance"
 
   // Pass the input variables to the module
-  instance_name      = var.instance_name
-  instance_type      = var.instance_type
+  ec2_instances = var.ec2_instances
   instance_role_name = var.instance_role_name
 }
 
@@ -31,10 +30,4 @@ module "sns-service" {
   email_subscriptions   = var.email_subscriptions
   notification_message  = var.notification_message
   lambda_role_arn       = var.lambda_role_arn
-}
-
-// Module outputs
-output "ec2_instance_id" {
-  description = "The ID of the EC2 instance"
-  value = module.ec2-instance.instance_id
 }
