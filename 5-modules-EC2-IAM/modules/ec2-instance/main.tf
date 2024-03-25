@@ -11,4 +11,12 @@ resource "aws_instance" "ec2_instance" {
   tags = {
     Name = each.value.instance_name
   }
+
+/* The following doesn't work since the SNS topic subscription is not a resource in the module
+  I would need to use remote states to make it work
+  But it's a bad practice to link modules togethers, because the point of modules is modularity
+
+  depends_on = [module.sns-topic.aws_sns_topic_subscription.sns_subscription]
+  // Dependance chain: the SNS topic subscriptions must be provisioned before the EC2 instances!
+*/
 }

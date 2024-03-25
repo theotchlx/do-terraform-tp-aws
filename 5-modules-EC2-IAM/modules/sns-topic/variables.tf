@@ -22,3 +22,9 @@ variable "lambda_role_arn" {
   description = "ARN of the Lambda function's IAM role"
   type        = string
 }
+
+variable "ec2_instance_id" {
+  description = "ID of the EC2 instance"
+  type        = string
+  
+}

@@ -51,3 +51,11 @@ variable "lambda_role_arn" {
   description = "ARN of the Lambda function's IAM role"
   type        = string
 }
+
+
+# CloudWatch variables
+
+variable "cloudwatch_rule_name" {
+  description = "Name of the CloudWatch event rule"
+  type        = string
+}

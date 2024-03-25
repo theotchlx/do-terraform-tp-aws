@@ -1,4 +1,4 @@
-// Data source to get the most recent Amazon Linux AMI ID in the eu-west-3 region
+# Data source to get the most recent Amazon Linux AMI ID in the eu-west-3 region
 data "aws_ami" "amazon_linux_ami" {
   most_recent = true
   owners      = ["amazon"]
