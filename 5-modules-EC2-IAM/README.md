@@ -49,13 +49,6 @@ But for that, you need to give a keypair to your environment.
 Navigate to the "5-modules-EC2-IAM" directory using `cd 5-modules-EC2-IAM` and run `terraform apply`. Type `yes` and press enter.  
 This will provision the infrastructure.
 
-## 3. What is provisionned?
-The provisionned infrastructure corresponds to:
-The two parts of TP5
-Plus the following bonus points thingies:
-- eee
-- eee eeEeEEEeee
-
 ---
 
 # 2. Theo P (Teach)'s doc
