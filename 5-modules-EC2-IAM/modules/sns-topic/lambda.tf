@@ -9,7 +9,7 @@ data "archive_file" "lambda_exporter" {
   // Archive the Lambda function code automatically
   output_path = "${path.module}/lambda_function.zip"
   source {
-    content  = "1"
+    content  = file("${path.module}/lambda_function.py")
     filename = "lambda_function.py"
   }
   type        = "zip"
@@ -19,7 +19,7 @@ resource "aws_lambda_function" "lambda_function" {
   function_name = var.lambda_function_name
   role          = var.lambda_role_arn
   filename      = "${path.module}/lambda_function.zip"
-  handler       = "lambda_function.handler"
+  handler       = "lambda_function.lambda_handler"
   runtime       = "python3.10"
 
   environment {
@@ -31,10 +31,10 @@ resource "aws_lambda_function" "lambda_function" {
   }
 }
 
-resource "aws_lambda_permission" "sns_permission" {  // Permissions granted to invoke lambda function from SNS
+/*resource "aws_lambda_permission" "sns_permission" {  // Permissions granted to invoke lambda function from SNS
   statement_id  = "AllowSNSInvocation"
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.lambda_function.function_name
   principal     = "sns.amazonaws.com"
   source_arn    = aws_sns_topic.sns_topic.arn
-}
+}*/
