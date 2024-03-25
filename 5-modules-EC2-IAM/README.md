@@ -48,6 +48,7 @@ But for that, you need to give a keypair to your environment.
 
 Navigate to the "5-modules-EC2-IAM" directory using `cd 5-modules-EC2-IAM` and run `terraform init` followed by `terraform apply`. Type `yes` and press enter.  
 This will provision the infrastructure.
+You can use a `terraform.tfvars` file to pass values to your variables.
 
 ---
 
